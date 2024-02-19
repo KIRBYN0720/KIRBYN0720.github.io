@@ -7,6 +7,11 @@
                 const task = document.querySelector('#attendance').value;
                 console.log(task);
 
+                const li = document.createElement('li')
+                li.innerHTML = task;
+
+                document.querySelector('#Attendance').append(li);
+
 
                 //stop form from submitting
                 return false
