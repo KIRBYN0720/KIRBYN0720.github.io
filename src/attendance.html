@@ -2,28 +2,31 @@
 <html lang="en">
     <head>
         <title>Attendance</title>
-        <script>document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('form').onsubmit = () => {
-                const task = document.querySelector('#Attendance').value;
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').onsubmit = () => {
+                    const task = document.querySelector('#task').value;
 
-                const li = document.createElement('li');
-                li.innerHTML = task;
+                    const li = document.createElement('li');
+                    li.innerHTML = task;
 
-                document.querySelector('#People').append(li);
+                    document.querySelector('#tasks').append(li);
 
 
-                //stop form from submitting
-                return false;
+                    //stop form from submitting
+                    return false;
             }
             
-        })</script>
+        });
+        
+        </script>
     </head>
     <body>
         <h1>Attendance</h1>
-        <ul id="People">  
+        <ul id="tasks">  
         </ul>
         <form>
-            <input id="Marked Present" placeholder="Name" type="text">
+            <input id="task" placeholder="Name" type="text">
             <input type="submit">
         </form>
     </body>
