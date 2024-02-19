@@ -4,13 +4,12 @@
         <title>Attendance</title>
         <script>document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('form').onsubmit = () => {
-                const task = document.querySelector('#attendance').value;
-                console.log(task);
+                const task = document.querySelector('#Attendance').value;
 
-                const li = document.createElement('li')
+                const li = document.createElement('li');
                 li.innerHTML = task;
 
-                document.querySelector('#Attendance').append(li);
+                document.querySelector('#People').append(li);
 
 
                 //stop form from submitting
@@ -21,7 +20,7 @@
     </head>
     <body>
         <h1>Attendance</h1>
-        <ul id="Attendance">  
+        <ul id="People">  
         </ul>
         <form>
             <input id="Marked Present" placeholder="Name" type="text">
